@@ -1,0 +1,394 @@
+/* - - - - - - - - - Google Font Import - - - - - - - - - */
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* - - - - - - - - - Broswer Reset - - - - - - - - - */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+:focus {
+    outline: 0;
+}
+
+/* - - - - - - - - - HTML-Strukturelemente - - - - - - - - - */
+
+body {
+    background-color: rgba(255, 255, 255, 1.0);
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 0.75em;
+    }
+}
+
+/* - - - - - - - - - Kopfzeile mit Logo, Titel und Navigation - - - - - - - - - */
+
+header {
+    background-color: rgb(235, 117, 197);
+    color: rgba(255, 255, 255, 1.0);
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 100%;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 720px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+/* Logo */
+.logo {
+    margin: 10px 0 0 0;
+}
+
+.logo img {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+}
+
+/* Textinhalt Kopfzeile */
+.titel {
+    margin: 0 20px 0 20px;
+}
+
+@media only screen and (max-width: 720px) {
+    .titel {
+        margin: 20px 0 20px 0;
+    }
+}
+
+/* Navigation mit Pfeil- und Listenicons */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+@media only screen and (max-width: 720px) {
+    nav {
+        justify-content: start;
+    }
+}
+
+nav a:hover {
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+nav img {
+    height: 38px;
+    width: 38px;
+}
+
+.arrow {
+    margin: 17px 0 0 0;
+}
+
+.overview {
+    margin: 17px 10px 0 10px;
+}
+
+/* - - - - - - - - - Inhaltsbereich - - - - - - - - - */
+
+main {
+    margin: 80px 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main a {
+    color: rgba(255, 123, 0, 1.0);
+    text-decoration: none;
+}
+
+main a:hover {
+    color: rgba(255, 123, 0, 0.5);
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 1200px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    main {
+        margin: 40px 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    main {
+        margin: 40px 40px;
+    }
+}
+
+/* Spaltenelement */
+section {
+    width: calc(50% - 40px);
+}
+
+@media only screen and (max-width: 1200px) {
+    section {
+        width: 100%;
+    }
+}
+
+section img {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Artikel */
+article {
+    margin: 0 0 80px 0;
+}
+
+@media only screen and (max-width: 720px) {
+    article {
+        margin: 0 0 60px 0;
+    }
+}
+
+
+/* - - - - - - - - - Videocontainer - - - - - - - - -  */
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    /*für 2:1 Verhältnis*/
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* - - - - - - - - - Fusszeile - - - - - - - - - */
+
+footer {
+    background-color: rgba(0, 83, 128, 1.0);
+    padding: 40px;
+    color: rgba(255, 255, 255, 1.0);
+}
+
+/* - - - - - - - - - Textelemente - - - - - - - - - */
+
+/* Uebergeordneter Titel */
+h1 {
+    font-size: 3em;
+    line-height: 1.25em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+    margin: 5px 0 10px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* Titel */
+h2 {
+    font-size: 2.5em;
+    margin: 40px 0 20px 0;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+}
+
+/* Untertitel */
+h3 {
+    font-size: 1.5em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+}
+
+/* Lead */
+h4 {
+    font-size: 1.5em;
+    margin: 40px 0 40px 0;
+}
+
+/* Textabsatz */
+p {
+    margin: 10px 0 20px 0;
+}
+
+/* Fette Schrift */
+strong {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+}
+
+/* Kursive Schrift */
+i {
+    font-style: italic;
+}
+
+/* Link */
+a {
+    color: rgba(255, 123, 0, 1.0);
+    text-decoration: none;
+}
+
+/* Link Mouseover */
+a:hover {
+    color: rgba(255, 123, 0, 0.5);
+    transition: 0.5s;
+}
+
+/* Bildlegende */
+legend {
+    font-size: 0.75em;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0 0 20px 0;
+}
+
+/* Trennlinie */
+hr {
+    border-top: 0.5px solid rgba(0, 0, 0, 1.0);
+    margin: 20px 0 20px 0;
+}
+
+/* Aufzaehlung */
+ul {
+    margin: 0px 0 20px 15px;
+}
+
+/* ----------- Fade in ---------------------------------------------------------------------------- */
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(0px);
+    transition: opacity 1s ease-in-out, transform 1.0s ease-in-out;
+}
+
+.fade-in-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}

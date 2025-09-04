@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wochenberichte 2025/2026, Irem Dönmez, Lernende/r Fachrichtung EFZ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon.png" sizes="96x96">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+  <meta name="msapplication-TileImage" content="favicon.png">
+</head>
+
+<body>
+
+  <!-- - - - - - - - - - - - Kopfzeile Start - - - - - - - - - - - -->
+  <header class="fade-in-up">
+
+    <!-- Logo Start -->
+<a href="index.html">
+      <div class="logo">
+        <img src="Irem_Dönmez_small (1).jpg">
+      </div>
+    </a>
+    <!-- Logo Ende -->
+
+    <!-- Text Start -->
+    <div class="titel">
+      <h1>Wochenberichte 2025/2026</h1>
+      Irem Dönmez<br>
+      Informatikerin EFZ Plattformentwicklung
+    </div>
+    <!-- Text Ende -->
+
+    <!-- Navigation Start -->
+    <nav>
+      <div class="arrow"><a href="kw_36_2025.html" title="Back"><img src="images/arrow_back.png"></a></div>
+      <div class="overview"><a href="index.html" title="Overview"><img src="images/hamburger.png"></a></div>
+      <div class="arrow"><a href="kw_35_2025.html" title="Next"><img src="images/arrow_next.png"></a></div>
+    </nav>
+    <!-- Navigation Ende -->
+
+  </header>
+  <!-- - - - - - - - - - - - Kopfzeile Ende - - - - - - - - - - - -->
+
+  <!-- - - - - - - - - - - - Inhalt Start - - - - - - - - - - - -->
+  <main>
+
+    <!-- - - - - - - - - - - - Erste Spalte Start - - - - - - - - - - - -->
+    <section class="fade-in-up">
+      <h2>1. Semester 2025/2026</h2>
+      <hr>
+      <a href="kw_35_2025.html"><strong>KW 35 </strong>HTML</a><br>
+      <a href="kw_36_2025.html"><strong>KW 36 </strong>HTML</a><br>
+      <hr>
+    </section>
+    <!-- - - - - - - - - - - - Erste Spalte Ende - - - - - - - - - - - -->
+
+    <!--- - - - - - - - - - - Zweite Spalte Start - - - - - - - - - - - -->
+    <section class="fade-in-up">
+      <h2>2. Semester 2026</h2>
+      <hr>
+<a> Wochenberichte für das 2. Semester folgen.</a>
+      <hr>
+      <h2>Noten</h2>
+      <hr>
+      <a href="noten_pla_abu_20XX_XX.html"><strong>1. Lehrjahr</strong></a>
+      <hr>
+    </section>
+    <!-- - - - - - - - - - - - Zweite Spalte Ende - - - - - - - - - - - -->
+
+  </main>
+  <!-- - - - - - - - - - - - Inhalt Ende - - - - - - - - - - - -->
+
+
+  <!-- - - - - - - - - - - - Fusszeile Start - - - - - - - - - - - -->
+  <footer class="fade-in-up">
+    <strong>Wochenberichte 2025/2026</strong><br>
+    irem Dönmez<br>
+    Informatikerin EFZ Plattformentwicklung
+  </footer>
+  <!-- - - - - - - - - - - - Fusszeile Ende - - - - - - - - - - - -->
+
+  <script src="js/fadein.js"></script>
+
+
+</body>
+</html>
+
+<div id="leaves-container"></div>
+
+<script>
+// Hintergrund als Verlauf setzen
+document.body.style.background = "linear-gradient(to bottom, #fbeee6 0%, #f7d9aa 100%)";
+
+// Blätter-Container vorbereiten
+const container = document.getElementById("leaves-container");
+container.style.pointerEvents = "none";
+container.style.position = "fixed";
+container.style.top = "0";
+container.style.left = "0";
+container.style.width = "100vw";
+container.style.height = "100vh";
+container.style.zIndex = "9999";
+
+// Keyframe-Animation per JavaScript definieren
+const styleSheet = document.createElement("style");
+styleSheet.textContent = `
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+`;
+document.head.appendChild(styleSheet);
+
+// Funktion zum Erzeugen eines Blattes
+function createLeaf() {
+  const leaf = document.createElement("div");
+  leaf.classList.add("falling-leaf");
+  leaf.style.position = "absolute";
+  leaf.style.top = "-50px";
+  leaf.style.left = Math.random() * window.innerWidth + "px";
+  leaf.style.width = "30px";
+  leaf.style.height = "30px";
+  leaf.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Autumn_leaf_icon.svg/1024px-Autumn_leaf_icon.svg.png')";
+  leaf.style.backgroundSize = "contain";
+  leaf.style.backgroundRepeat = "no-repeat";
+  leaf.style.animationName = "fall";
+  leaf.style.animationDuration = (5 + Math.random() * 5) + "s";
+  leaf.style.animationTimingFunction = "linear";
+  leaf.style.animationIterationCount = "infinite";
+
+  container.appendChild(leaf);
+}
+
+// Mehrere Blätter erzeugen
+for (let i = 0; i < 15; i++) {
+  createLeaf();
+}
+</script>
