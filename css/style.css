@@ -290,7 +290,7 @@ article {
 /* - - - - - - - - - Fusszeile - - - - - - - - - */
 
 footer {
-    background-color: rgba(0, 83, 128, 1.0);
+    background-color: rgb(101, 2, 126);
     padding: 40px;
     color: rgba(255, 255, 255, 1.0);
 }
@@ -351,13 +351,13 @@ i {
 
 /* Link */
 a {
-    color: rgba(255, 123, 0, 1.0);
+    color: rgb(123, 9, 112);
     text-decoration: none;
 }
 
 /* Link Mouseover */
 a:hover {
-    color: rgba(255, 123, 0, 0.5);
+    color: rgba(239, 50, 179, 0.5);
     transition: 0.5s;
 }
 
