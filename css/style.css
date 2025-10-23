@@ -219,7 +219,7 @@ main a {
 }
 
 main a:hover {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
     transition: 0.5s;
 }
 
