@@ -119,7 +119,7 @@ section {
 /* - - - - - - - - - HTML-Strukturelemente - - - - - - - - - */
 
 body {
-    background-color: rgb(247, 204, 255);
+    background-color: rgb(216, 159, 226);
     font-size: 1em;
     line-height: 1.5;
     font-family: 'Noto Sans', sans-serif;
@@ -135,8 +135,8 @@ body {
 /* - - - - - - - - - Kopfzeile mit Logo, Titel und Navigation - - - - - - - - - */
 
 header {
-    background-color: rgb(201, 148, 235);
-    color: rgba(255, 255, 255, 1.0);
+    background-color: rgb(177, 103, 223);
+    color: rgb(255, 255, 255);
     padding: 40px;
     display: flex;
     flex-direction: row;
@@ -219,7 +219,7 @@ main a {
 }
 
 main a:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(101, 14, 173);
     transition: 0.5s;
 }
 
@@ -304,6 +304,7 @@ h1 {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 400;
     margin: 5px 0 10px 0;
+    color: #ffffff; /* changed to white */
 }
 
 @media only screen and (max-width: 600px) {
@@ -318,6 +319,7 @@ h2 {
     margin: 40px 0 20px 0;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 400;
+    color: #000000; /* changed to white */
 }
 
 /* Untertitel */
@@ -371,7 +373,7 @@ legend {
 
 /* Trennlinie */
 hr {
-    border-top: 0.5px solid rgba(0, 0, 0, 1.0);
+    border-top: 0.5px solid rgb(255, 255, 255);
     margin: 20px 0 20px 0;
 }
 
@@ -391,4 +393,28 @@ ul {
 .fade-in-up.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Titles only on index page */
+.index-page h1 {
+    font-size: 3em;
+    line-height: 1.25em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+    margin: 5px 0 10px 0;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+    .index-page h1 {
+        font-size: 2.5em;
+    }
+}
+
+.index-page h2 {
+    font-size: 2.5em;
+    margin: 40px 0 20px 0;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
 }
