@@ -1,7 +1,9 @@
 /* - - - - - - - - - Google Font Import - - - - - - - - - */
+
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* - - - - - - - - - Broswer Reset - - - - - - - - - */
+
 * {
     padding: 0;
     margin: 0;
@@ -115,6 +117,7 @@ section {
 }
 
 /* - - - - - - - - - HTML-Strukturelemente - - - - - - - - - */
+
 body {
     background-color: rgb(216, 159, 226);
     font-size: 1em;
@@ -130,6 +133,7 @@ body {
 }
 
 /* - - - - - - - - - Kopfzeile mit Logo, Titel und Navigation - - - - - - - - - */
+
 header {
     background-color: rgb(177, 103, 223);
     color: rgb(255, 255, 255);
@@ -137,6 +141,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-size: 100%;
     font-size: 1em;
 }
 
@@ -173,8 +178,6 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: end;
-    position: relative; /* für z-index Fix */
-    z-index: 100;
 }
 
 @media only screen and (max-width: 720px) {
@@ -193,18 +196,6 @@ nav img {
     width: 38px;
 }
 
-/* Pfeile und Menü klickbar machen */
-.arrow, .overview {
-    position: relative;
-    z-index: 101; /* über allen anderen Elementen */
-    cursor: pointer;
-}
-
-.arrow img, .overview img {
-    display: block;
-    pointer-events: none; /* Bild blockiert Klicks nicht */
-}
-
 .arrow {
     margin: 17px 0 0 0;
 }
@@ -214,6 +205,7 @@ nav img {
 }
 
 /* - - - - - - - - - Inhaltsbereich - - - - - - - - - */
+
 main {
     margin: 80px 120px;
     display: flex;
@@ -276,10 +268,12 @@ article {
     }
 }
 
-/* - - - - - - - - - Videocontainer - - - - - - - - - */
+
+/* - - - - - - - - - Videocontainer - - - - - - - - -  */
 .responsive-video {
     position: relative;
     padding-bottom: 56.25%;
+    /*für 2:1 Verhältnis*/
     padding-top: 0px;
     height: 0;
     overflow: hidden;
@@ -294,6 +288,7 @@ article {
 }
 
 /* - - - - - - - - - Fusszeile - - - - - - - - - */
+
 footer {
     background-color: rgb(201, 148, 235);
     padding: 40px;
@@ -301,6 +296,7 @@ footer {
 }
 
 /* - - - - - - - - - Textelemente - - - - - - - - - */
+
 /* Uebergeordneter Titel */
 h1 {
     font-size: 3em;
@@ -308,7 +304,7 @@ h1 {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 400;
     margin: 5px 0 10px 0;
-    color: #ffffff;
+    color: #ffffff; /* changed to white */
 }
 
 @media only screen and (max-width: 600px) {
@@ -323,7 +319,7 @@ h2 {
     margin: 40px 0 20px 0;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 400;
-    color: #000000;
+    color: #000000; /* changed to white */
 }
 
 /* Untertitel */
@@ -387,6 +383,7 @@ ul {
 }
 
 /* ----------- Fade in ---------------------------------------------------------------------------- */
+
 .fade-in-up {
     opacity: 0;
     transform: translateY(0px);
