@@ -418,3 +418,19 @@ ul {
     font-weight: 400;
     color: #ffffff;
 }
+.arrow, .overview {
+    position: relative;      /* wichtig für z-index */
+    z-index: 9999;           /* ganz oben */
+    cursor: pointer;         /* zeigt klickbar an */
+    display: flex;           /* damit img im div zentriert ist */
+    align-items: center;
+    justify-content: center;
+    width: 50px;             /* ausreichend Klickbereich */
+    height: 50px;
+}
+
+.arrow img, .overview img {
+    pointer-events: none;    /* Bild blockiert Klick nicht */
+    max-width: 100%;
+    max-height: 100%;
+}
