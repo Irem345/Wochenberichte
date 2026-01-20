@@ -4,7 +4,9 @@
 
 const FIRST_WEEK = 35;
 const LAST_WEEK = 47;
-const YEAR = 2025;
+
+var YEAR;
+var targetFile;
 
 // Prüfen, ob eine Seite existiert
 async function pageExists(filename) {
@@ -21,6 +23,7 @@ async function pageExists(filename) {
 function getWeekFromURL() {
     const url = window.location.pathname;
     const match = url.match(/kw_(\d+)_(\d{4})\.html$/);
+    YEAR = url.substring(7,11)
     if (!match) return null; // index.html
     return parseInt(match[1]);
 }
@@ -34,23 +37,23 @@ async function navigate(offset) {
     // =========================
     // Index-Seite
     // =========================
-    if (!currentWeek) {
-        targetWeek = offset < 0 ? FIRST_WEEK : LAST_WEEK;
+    if (currentWeek == 52) {
+            targetWeek = "kw_01_2026.html";
+            targetFile = targetWeek
+
+    } else if (currentWeek === 1 && offset === -1) {
+            targetWeek = "kw_52_2025.html";
+            targetFile = targetWeek
+
     } else {
-        targetWeek = currentWeek + offset;
-
-        // KW-Grenzen setzen
-        if (targetWeek < FIRST_WEEK) targetWeek = FIRST_WEEK;
-        if (targetWeek > LAST_WEEK) targetWeek = LAST_WEEK;
-
-        // Sonderfall: KW 35 oder KW 47 → zurück zu Index
-        if (targetWeek === FIRST_WEEK || targetWeek === LAST_WEEK) {
-            window.location.href = "index.html";
-            return;
-        }
+    targetWeek = currentWeek + offset;
+    if (targetWeek < 10) {
+        targetWeek = "0" + targetWeek
     }
+    targetFile = `kw_${targetWeek}_${YEAR}.html`;
 
-    const targetFile = `kw_${targetWeek}_${YEAR}.html`;
+    }
+    
     const exists = await pageExists(targetFile);
 
     if (exists) {
